@@ -23,6 +23,9 @@ public class TextWriterForm extends javax.swing.JFrame {
    */
   public TextWriterForm() {
     initComponents();
+    Backup back = new Backup(lines);
+    Thread back1 = new Thread(back);
+    back1.start();
     txtNewLine.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
